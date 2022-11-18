@@ -1,0 +1,90 @@
+/************************************************************************************/
+/*  Web del Romanticismo                                                            */
+/*  Hoja de estilo para autores                                                     */
+/*  autor: Daniel Contreras Pastrana                                                */
+/*  version: 1.0                                                                    */
+/*  fecha: 21 de Octubre de 2022                                                    */
+/************************************************************************************/
+
+/* ESTILO GENERAL         
+                                                          */
+@font-face {
+            src: url('../fonts/BacktoBlackDemo.ttf');
+            font-family: titulos;
+            }
+
+@font-face {src: url('../fonts/NunitoSans-Regular.ttf');
+            font-family: textos
+            }
+
+*{box-sizing: border-box;} /*en width debe contar desde el borde hacia adentro*/
+
+body {  margin: 0;padding: 0;
+        font-family: textos; /*para fuentes se utiliza la medida em*/
+        text-indent: 3em;
+        text-align: justify;
+       /* padding: 4%; no necesito padding con un layout*/
+        background-color:#534E3E;
+    }
+
+#wrapper { 
+            background-color: white;
+            width: 80%; /*para cajas bloques utilizamos % por ser una medida grande*/
+            margin: 0 auto;
+            padding: 2%;
+            /* Si queremos que el wrapper llege hasta abajo en su total
+                lo forzamos con height: 100vh*/
+            }
+
+h1,h2,h3 {
+            font-family: titulos;
+            border-bottom: 2px solid rgb(107, 70, 1);
+            width: 75%;
+            text-align: center;
+            text-indent: 0;
+            margin: auto;
+            margin-bottom: 50px;
+            padding-bottom: 8px;
+        
+        
+        }
+
+#espronceda { /* Para que la imagen tenga el texto alrededor poner "id" en html y "#" 
+                        en css*/
+                    width: 30%;
+                    float: right;
+                    margin: 0 auto;
+                    padding-left: 10px;
+                    
+        }
+
+/*********** MEDIA QUERIES ************/ /*SENTENCIA IF*/
+/*Para ajustar el diseño web a distintos dispositivos segun tamaño*/
+
+
+/***** para tablet**********/
+
+@media screen and (width<=850px){ /*si la pantalla es menor de 850px aplicamos los siguiente...*/
+        #espronceda {width: 50%;}
+}
+
+/****** para movil *********/
+
+@media screen and (width<=600px){ /*si la pantalla es menor de 600px aplicamos los siguiente...*/
+        #espronceda {width: 100%;}
+        #wrapper {width: 100%;}
+
+}
+
+#limpiar {clear:both;} /*para desactivar el float left/right*/
+
+p {
+        text-align: justify;
+
+}
+
+/*nombramos al link interno y le aplicamos el estilo*/
+a {text-decoration: none;
+        color: #6B4601;}
+/*pseudoclase como selector :hover (RATON ENCIMA)*/
+a:hover {color:rgb(253, 192, 100)}

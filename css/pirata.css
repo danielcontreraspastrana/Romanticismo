@@ -1,0 +1,29 @@
+/************************************************************************************/
+/*  Web del Romanticismo                                                            */
+/*  Hoja de estilo para CANCION DEL PIRATA                                          */
+/*  autor: Daniel Contreras Pastrana                                                */
+/*  version: 1.0                                                                    */
+/*  fecha: 04 de Noviembre de 2022                                                  */
+/************************************************************************************/
+
+/* ESTILO GENERAL*************************************************************/
+
+@font-face {
+    font-family: escritura;
+    src: url(../fonts/GloriaHallelujah-Regular.ttf);
+}
+body {  font-family: escritura;
+        font-size:1.2em;
+        text-align: center;
+        color:#E7E4D3;
+        
+        background-color: #4F6F57;
+        background-image: url(../images/fondopirata.jpg);
+        background-repeat: repeat-y ;
+        background-position: left;
+        background-size: 30%;
+    }
+
+#poema {
+        width: 20%;
+        margin-left: 50%;}

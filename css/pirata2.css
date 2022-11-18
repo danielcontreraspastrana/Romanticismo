@@ -1,0 +1,61 @@
+/************************************************************************************/
+/*  Web del Romanticismo                                                            */
+/*  Hoja de estilo2 para CANCION DEL PIRATA                                          */
+/*  autor: Daniel Contreras Pastrana                                                */
+/*  version: 1.0                                                                    */
+/*  fecha: 04 de Noviembre de 2022                                                  */
+/************************************************************************************/
+
+/* ESTILO GENERAL*************************************************************/
+
+
+@font-face {
+    font-family: escritura;
+    src: url(../fonts/GloriaHallelujah-Regular.ttf);
+}
+
+body {  font-family: escritura;
+        font-size:1.5em;
+        color: white;
+    /*vamos a colocar una foto sola de fondo*/
+        background-image: url(../images/backgroundpirata.jpg);
+    /*para que el fondo no se repita*/
+        background-repeat: no-repeat;
+    /* para que el fondo se expanda por toda la pantalla*/
+        background-size: cover;
+    /*para que cubra toda la pantalla en alto, le ponemos un height 100vh=100%
+        si no cubre, le aumentamos el vh hasta que cubra*/
+       /*height: 100vh*/
+        
+}
+#poema {
+        width: 30%;
+        background-color: #352a1986;
+        text-align: center;
+        margin-left: 65%;
+        background-origin: padding-box;
+        border: solid #a88d798a;
+        border-radius: 50px 50px;
+    }
+/*funciones para adaptar la pantalla a moviles y tables condicional*/
+    @media only screen and (width<=1400px) {
+        #poema {
+                 margin-left: 20%;
+                 width: 70%;}
+    }
+
+.fa {font-size: 300% !important; /*cambia el tamaño de los iconos .fa en general y poner !important*/
+        }
+    /*nombramos la etiqueta de cada icono y le damos los parametros*/
+.fa-facebook-square {color: #3B5998;} 
+.fa-twitter-square {color: #55ACEE}
+.fa-instagram {color: rgb(255, 38, 147)}
+
+a {
+    text-decoration: none;
+    color: #b99a64;
+}
+a:hover {color:black}
+
+
+
