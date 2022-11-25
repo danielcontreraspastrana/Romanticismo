@@ -22,31 +22,42 @@
 body {  margin:0; padding:0; /*Resetear el por defecto de la ventana*/
         font-family: textos;
         font-size: 1.6em; 
-        background-color: black;       
+        background-color: #aa8d737e;       
 }
 
 #wrapper {  width: 80%;
             margin:auto;
             background-color: aliceblue;}
 
+section {padding: 4% 0;} /* siempre voy a querer que el contenido de cualquier
+                            seccion quede separado del borde superior/inferior*/
+
+
+.titulo-seccion{font-family: titulos;
+                font-size: 2.5rem;
+                color: #4d1b11;
+                padding-top: 5px;
+                text-align: center;
+                padding-bottom: 4%;
+}
 
 /***********    HERO SECTION    OPTCION 1: FOTO + TEXTO  *********************/
-#hero {background-image: url(../images/cuadro_jeanlouis.jpg);
+#hero {background-image: url(../images/wanderer-above-the-sea-fog-friedrich.jpg);
         height: 100vh;                  /* Obligar a que se vea mas allá del contenido del bloque */
         background-repeat: no-repeat;   /* No repita el patron de la foto */
         background-size: cover;         /* Cubre todo el fondo */
-        background-position: center;    /* Fija la imagen al centro, si achicamos se mantendra centrada y tamaño adaptado */ 
-        color: rgb(0, 0, 0);          /* Utilizamos rem para que tenga en cuenta la proporcion de la raiz completa y no del div o seccion*/
+        background-position: center;    /* Fija la imagen al centro, si achicamos se mantendra centrada y tamaño adaptado */           
         padding-left: 5%;
         padding-top: 5%;}
 
-#titulo {background-color: rgba(255, 255, 255, 0.199);
-        width: 40%;
+#titulo {background-color: rgba(255, 255, 255, 0.507);
+        width: 30%;
         padding: 2%;
         text-align: center;
-        border-radius: 50%;
+        border-radius: 8% 8% 8% 8%;
         font-family: titulos;       /* la fuente debe ir en el titulo y no en el hero*/
-        font-size: 3rem;
+        font-size: 3rem;            /* Utilizamos rem para que tenga en cuenta la proporcion de la raiz completa y no del div o seccion*/
+        color:#4d1b11;
     }
 /***********    HERO SECTION 2: APP + POSITION + FROSTED GLASS  *********************/
 
@@ -67,7 +78,7 @@ body {  margin:0; padding:0; /*Resetear el por defecto de la ventana*/
             padding-bottom: 15px;
             border-radius: 30%;
             
-           
+
             
 
             /* Estas cuatro reglas colocan una caja en medio de otra */
@@ -84,7 +95,7 @@ body {  margin:0; padding:0; /*Resetear el por defecto de la ventana*/
         
  /***********    HERO SECTION 3: COLOR LISO + GATEWAVES  *********************/
 
- #hero3 {   background-color: #309184; /* El mismo color de la ola*/
+#hero3 {   background-color: #309184; /* El mismo color de la ola*/
             height: 40vh;
             position: relative;
         }
@@ -97,10 +108,73 @@ body {  margin:0; padding:0; /*Resetear el por defecto de la ventana*/
             left: 50%;
             transform:translate(-50%,-50%);
         }
+/********** GRID IDEAS  ***************/
+
+#ideas{background-color: rgba(128, 128, 128, 0.26);}
+
+/* Vamos a montar un GRID en dos columnas al 50%*/
+/* Necesito primero un contenedor grid*/
+
+#grid2 {display: grid;
+        grid-template-columns: 50% 50%;
+        font-family: texto;
+        font-size: 1.2rem;}
 
 
 
+/* Selecciono las imágenes DENTRO de una columna y les aplico el 100% que es el ancho
+    que es el ancho total de la columna*/
 
+.col2 img {width: 100%;
+            
+            }
+
+.coltexto {padding: 4%;}
+/************** AUTORES **************************************/
+#grid4 {display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    font-family: texto;
+    font-size: 1.2rem;}
+.col4 {padding: 8%;
+    }
+
+.boton {text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(85, 85, 85, 0.411);
+            padding: 5px 10px;}
+    
+.boton:hover {background-color: white;
+                color: #777;}
+/************** FOOTER  **************************************/
+footer {background-color: rgba(128, 128, 128, 0.26);}
+
+#grid3 {display: grid;
+    grid-template-columns: 25% 25% 50%;
+    font-family: texto;
+    font-size: 1.3rem; }
+.col3 {padding: 8%;}
+#ancha {padding: 3%;}
+
+/**** estilo de la CARDS de w3schools *****/
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 1.3s;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.651);
+  }
+  
+  /* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    background-color: #D5C6B9;
+    margin-top: -2px;
+  }
+.card img{width: 100%;}
 
 /***************     MEDIA QUERIES       *********************/
 
@@ -109,11 +183,19 @@ body {  margin:0; padding:0; /*Resetear el por defecto de la ventana*/
     #titulo {width: 80%;}
     #titulo2 {width: 70%;}
 }
-
+/*****  PARA TABLET *******/
 @media only screen and (width<=900px){
     #wrapper {width:90%}
+    #grid2 {grid-template-columns: 100%;}
+    #grid4 {grid-template-columns: 50% 50%;}
+    #grid3 {grid-template-columns: 50% 50%;}
+    #ancha {margin: auto;}
+    
 }
-
+/*****  PARA MOVIL  *******/
 @media only screen and (width<=600px){
     #wrapper {width: 100%;}
+    #grid4 {grid-template-columns: 100%;}
+    #grid3 {grid-template-columns: 100%;}
+    
 }
