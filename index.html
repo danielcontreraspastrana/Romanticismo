@@ -1,8 +1,8 @@
 <!-- se puede diseñar la maquetacion de 2 FORMAS:
 
-    -1) para PC y adaptar luego con media queries "@media screen" para tablet y movil (PCFIRST)
+    -1 para PC y adaptar luego con media queries "@media screen" para tablet y movil (PCFIRST)
     
-    -2) Se diseña para movil y luego se adapta con media queries para tablet o pc (MOVILE FIRST)
+    -2 Se diseña para movil y luego se adapta con media queries para tablet o pc (MOVILE FIRST)
 
     -->
 
@@ -14,8 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romanticismo</title> <!-- el titulo que aparece en la pestaña-->
 
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="../Romanticismo/images/favicompoesia.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- enlace de redes sociales libreria-->
+
+    <link rel="stylesheet" href="./css/index.css"> <!-- enlace a la hoja de estilo-->
+
+    <link rel="shortcut icon" href="../Romanticismo/images/favicompoesia.png" type="image/x-icon"> <!-- favicon enlace-->
+    <script src="./js/funciones.js"></script>
+    
 </head>
 <body>
 
@@ -23,8 +28,22 @@
         layout en scroll con 4 secciones y el footer(redessociales)--> 
 
     <div id="wrapper">
-        <nav>
-            aqui va la barra de navegacion
+        <nav> <!--- topnav barra de navegacion-->
+            <div class="topnav" id="myTopnav">
+                <a href="#">Inicio</a>
+                <a href="#intro">Introduccion</a>
+                <a href="#ideas">Ideas Principales</a>
+                <a href="#autores">Autores</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+                <!-- el ultimo boton es especial se desactiva su "href" para que no
+                mande a ningun sitio, a cambio, es manipulado por un javascript, que hace
+                que se oculte cuando los demas botones estén a la vista y se muestre cuando
+                los botones se oculten, Aparece cuando la pantalla solo es estrecha mediaquery-->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
         </nav>
         <!-- HERO VERSION 1: FOTO + TEXTO-->
         <section id="hero">
@@ -64,12 +83,22 @@
                 
             </div>
             <div class="col2 coltexto">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nobis obcaecati sint est omnis saepe harum alias fugiat dolores quasi perferendis blanditiis, autem laboriosam at odio modi voluptate earum repellat.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nobis obcaecati sint est omnis saepe harum alias fugiat dolores quasi perferendis blanditiis, autem laboriosam at odio modi voluptate earum repellat.
+                <ul>
+                    <li>Idea1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, qui neque. Id laborum r ea.</li>
+                    <li>Idea2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci placeat maiores magni alias sequi . </li>
+                    <li>Idea3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos in at tempora placeat ea, corporis .</li>
+                    <li>Idea4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam ducimus officia earum, repudiandae voluptate e. </li>
+                    <li>Idea5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident vero, iste nihil numquam per error.</li>
+                </ul>
             </div>
-            <div class="col2 coltexto">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nobis obcaecati sint est omnis saepe harum alias fugiat dolores quasi perferendis blanditiis, autem laboriosam at odio modi voluptate earum repellat.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nobis obcaecati sint est omnis saepe harum alias fugiat dolores quasi perferendis blanditiis, autem laboriosam at odio modi voluptate earum repellat.
+            <div class="col2 coltexto" id="parte2">
+                <ul>
+                    <li>Idea1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, qui neque. Id laborum r ea.</li>
+                    <li>Idea2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci placeat maiores magni alias sequi . </li>
+                    <li>Idea3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos in at tempora placeat ea, corporis .</li>
+                    <li>Idea4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam ducimus officia earum, repudiandae voluptate e. </li>
+                    <li>Idea5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident vero, iste nihil numquam per error.</li>
+                </ul>
             </div>
             <div class="col2">
                 <img src="../Romanticismo/images/Joseph_Mallord_William_Turner_-_Bell_Rock_Lighthouse_-_Google_Art_Project.jpg" alt="">
@@ -97,7 +126,7 @@
                     <img src="../Romanticismo/images/becquer.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
                       <h4><b>Bequer</b></h4>
-                      <p>Leer mas</p>
+                      <p><a class="boton" href="#autores">Leer mas</a></p> <!-- con #nombredelaseccion nos lleva a la seccion-->
                     </div>
                   </div>
             </div>
@@ -106,7 +135,7 @@
                     <img src="../Romanticismo/images/larra.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
                       <h4><b>Larra</b></h4>
-                      <p>Leer mas</p>
+                      <p><a class="boton" href="#">Leer mas</a></p>
                     </div>
                   </div>
             </div>
@@ -115,23 +144,53 @@
                     <img src="../Romanticismo/images/zorrilla.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
                       <h4><b>Zorrilla</b></h4>
-                      <p>Leer mas</p>
+                      <p><a class="boton" href="#">Leer mas</a></p>
                     </div>
                   </div>
             </div>
         </div>
+        <section id="galeria">
+            <div class="titulo-seccion">
+                Galería
+            </div>
+            <!-- LO PEGO A LO BASTO -->
+            <!-- 1 Voy a youtube y compio el iframe-->
+            <!-- 2 Lo pego aqui y quito el widht y el height -->
+            <!-- 3 Le añado la class responsive-iframe-->
+            <!-- 4 Le pongo un div de la clase container -->
+            <!-- 5 Copio el CSS en mi hoja de estilo-->
 
+            <div class="container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/rH9PfpZSCoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="contacto">
+            <div class="titulo-seccion">
+                Contacto
+                </div>
+                <div class="container">
+                <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.2563608884934!2d-4.556996085055056!3d36.74041717996093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1669972315549!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<               /div>
+        </section>
         <footer>
-    
         <div id="grid3">
             <div class="col3">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, repudiandae autem! Libero rerum aut dolorem porro non, blanditiis ullam earum quos ipsam ratione optio dolorum temporibus rem natus totam dolor.    
+            <img src="./images/feather-xxl.png" alt="logotipo de la pluma">
             </div>
             <div class="col3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nulla ducimus voluptates. Eligendi asperiores incidunt omnis suscipit placeat beatae debitis provident dolorem nihil qui quasi, voluptas recusandae sequi aliquam ipsum!
+           <a href="#" class="enlace"> Inicio</a><br> 
+           <a href="#intro" class="enlace"> Introduccion</a><br> 
+           <a href="#ideas" class="enlace"> Ideas</a><br> 
+           <a href="#autores" class="enlace"> Autores</a><br> 
+           <a href="#galeria" class="enlace"> Galeria</a><br> 
+           <a href="#contacto" class="enlace"> Contacto</a><br> 
             </div>
             <div class="col3" id="ancha">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum reprehenderit similique aperiam, accusantium nam dolores? Debitis nobis ab, unde labore beatae cupiditate nesciunt accusantium quasi neque amet a sed? Dolor.
+                <p>Siguenos en Redes Sociales:</p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
             </div>
         </div>   
         </footer>
